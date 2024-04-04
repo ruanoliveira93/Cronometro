@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cronometro</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/css/style.css">
 </head>
 
 <body>
@@ -14,9 +14,9 @@
     <div class="cronometro">
         
             <div class="imagem">
-                <img src="img/Botao StartStop.png" id="start" alt="botão iniciar">
-                <img src="img/Botão Reset.png" id="reset" alt="botão resetar">
-                <img src="img/Cronometro.png" id="crono" alt="Cronometro">
+                <img src="src/img/Botao StartStop.png" id="start" onclick="startStop('iniciar pausar')" alt="botão iniciar">
+                <img src="src/img/Botão Reset.png" id="reset" onclick="reset('resetar')" alt="botão resetar">
+                <img src="src/img/Cronometro.png" id="crono" alt="Cronometro">
             </div>
             <div class="contagem">
                 <div>
@@ -28,21 +28,25 @@
                     <span>Minutes</span>
                 </div>
                 <div>
-                    <span id="second">00</span>
+                    <span id="seconds">00</span>
                     <span>Second</span>
                 </div>
                 <div class="tempo">
-                    <span id="millisecond">00</span>
+                    <span id="milliseconds">00</span>
                     <span>ms</span>
                 </div>
             </div>
         <div class="botao">
-            <button type="button" name="start"  id="iniciar pausar">Iniciar</button>
-            <button type="button" name="reset" id="resetar">Resetar</button>
+            <button type="button" name="start"  id="iniciar pausar" onclick="startStop('start')">Iniciar</button>
+            <button type="button" name="reset" id="resetar" onclick="reset()">Resetar</button>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <footer>
+        <p>&copy;Created project by Ruan Oliveira</p>
+    </footer>
+
+    <script src="src/js/script.js"></script>
 </body>
 
 </html>

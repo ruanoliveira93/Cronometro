@@ -70,7 +70,7 @@ span {
     margin-bottom: -6px;
 }
 /* Tamanho da fonte dos números */
-.tempo, #hours, #minutes, #second, #millisecond {
+.tempo, #hours, #minutes, #seconds, #milliseconds {
     font-size: 60px;
 }
 /* Tamanho do texto ms */
@@ -79,7 +79,7 @@ span {
     margin-top: 15px;
 }
 /* Tamanho da fonte do número ms */
-.tempo span#millisecond {
+.tempo span#milliseconds {
     font-size: 25px;
 }
 /* Div dos botões */
@@ -121,6 +121,11 @@ span {
     top: -140px;
     z-index: -1;
 }
+
+.imagem #start:active {
+    transform: translateY(33%);
+    transition: 1ms;
+}
 /* Imagem Botão Reset do Relógio */
 .imagem #reset {
     width: 100px;
@@ -128,11 +133,33 @@ span {
     position: absolute;
     top: -40px;
     right: 0px;
-    transform: rotate(9deg);
+    transform: rotate(10deg);
     z-index: -1;
+}
+
+.imagem #reset:active {
+    margin-top: 15px;
+    margin-right: 15px;
+    transition: 1ms;
 }
 /* Imagem Relógio */
 #crono {
     width: 500px;
     height: auto;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    bottom: -70px;
+    position: absolute;
+}
+
+footer p {
+    font-family: 'Berry Rotunda', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
 }

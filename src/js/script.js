@@ -1,71 +1,59 @@
-const imgIniciar = document.querySelector('#start');
-const imgResetar = document.querySelector('#stop');
-const btnIniciar = document.getElementsByName('start');
+let timer;
+let hours = 0;
+let minutes = 0;
+let seconds = 0;
+let milliseconds = 0;
 
+function startStop() {
+    if (!timer) {
+        timer = setInterval(run, 10);
+        document.querySelector('button[name="start"]').textContent = "Parar";
+    } else {
+        clearInterval(timer);
+        timer = false;
+        document.querySelector('button[name="start"]').textContent = "Iniciar";
+    }
+}
 
-let horas = 0;
-let minutos = 0;
-let segundos = 0;
-let milissegundos = 0;
-let intervalId;
+function reset() {
+    clearInterval(timer);
+    timer = false;
+    document.querySelector('button[name="start"]').textContent = "Iniciar";
+    hours = 0;
+    minutes = 0;
+    seconds = 0;
+    milliseconds = 0;
+    document.getElementById("hours").innerText = "00";
+    document.getElementById("minutes").innerText = "00";
+    document.getElementById("seconds").innerText = "00";
+    document.getElementById("milliseconds").innerText = "00";
+}
 
-function Iniciar() {
-
-    milissegundos++;
-    if (milissegundos === 100) {
-        milissegundos = 0;
-        segundos++;
-        if (segundos === 60) {
-            segundos = 0;
-            minutos++;
-            if (minutos === 60) {
-                minutos = 0;
-                horas++;
+function run() {
+    milliseconds++;
+    if (milliseconds >= 100) {
+        milliseconds = 0;
+        seconds++;
+        if (seconds >= 60) {
+            seconds = 0;
+            minutes++;
+            if (minutes >= 60) {
+                minutes = 0;
+                hours++;
             }
         }
     }
-    document.getElementById('cronometro').innerText = `${horas.toString().padStart(2, '0')}:${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}.${milissegundos.toString().padStart(3, '0')}`;
+
+    document.getElementById("hours").innerText = pad(hours);
+    document.getElementById("minutes").innerText = pad(minutes);
+    document.getElementById("seconds").innerText = pad(seconds);
+    document.getElementById("milliseconds").innerText = pad(milliseconds);
 }
 
-document.getElementById('iniciar').addEventListener('click', () => {
-    intervalId = setInterval(atualizarCronometro, 10);
-});
-document.getElementById('pausar').addEventListener('click', () => {
-    clearInterval(intervalId);
-});
-document.getElementById('resetar').addEventListener('click', () => {
-    clearInterval(intervalId);
-    horas = 0;
-    minutos = 0;
-    segundos = 0;
-    milissegundos = 0;
-    document.getElementById('cronometro').innerText = '00:00:00.000';
-});
-
-
-
-//Se a variável for menor que 10, o elemento irá receber '0' mais a variável
-
-
-function Parar() {
-    clearInterval(tempo--);
+function pad(value) {
+    return value < 10 ? "0" + value : value;
 }
 
 
-function Resetar() {
-    document.getElementById('hours').innerHTML = '00';
-    document.getElementById('minutes').innerHTML = '00';
-    document.getElementById('second').innerHTML = '00';
-    document.getElementById('millisecond').innerHTML = '00';
-}
-function Press() {
-    document.addEventListener('click', () => {
-        document.getElementById('start').style.transform = 'translateY(33%)';
-    })
-}
 
-function Realese() {
-    document.removeEventListener('click', () => {
-        document.getElementById('start').style.transform = 'translateY(0%)';
-    })
-}
+
