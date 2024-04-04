@@ -1,0 +1,75 @@
+@media screen and (max-width: 575px) {
+    
+    #crono {
+        width: 80%;
+        scale: 1;
+    }
+    #start {
+        scale: 1;
+        margin-top: 0px;
+        width: 100%;
+    }
+    #reset {
+        width: 100%;
+        scale: 1;
+        margin-right: 40px;
+        margin-top: 2px;
+        rotate: 2deg;
+    }
+    .imagem #reset:active {
+        margin-top: 23px;
+        margin-right: 50px;
+        rotate: 5deg;
+    }
+    .contagem {
+        position: absolute;
+        top: 180px;
+        width: 100%;
+        scale: 0.9;
+        margin-right: 10px;
+    }
+    .botao {
+        scale: 0.8;
+        margin: 50px 0px 0px 0px;
+        width: 100%;
+    }
+    footer {
+        width: 100%;
+        bottom: -80px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+   
+    #crono {
+        width: 80%;
+    }
+    #start {
+        scale: 0.6;
+        margin-top: 26px;
+    }
+    #reset {
+        scale: 0.6;
+        margin-top: 0px;
+        margin-right: 8px;
+        rotate: 4deg;
+    }
+    .imagem #reset:active {
+        margin-top: 10px;
+        margin-right: 15px;
+    }
+    .contagem {
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        scale: 0.6;
+        margin-right: 20px;
+    }
+    .botao {
+        scale: 0.8;
+        margin: 50px 0px 0px 0px;
+    }
+    footer {
+        bottom: -240px;
+    }
+}
