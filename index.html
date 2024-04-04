@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronometro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="cronometro">
+        
+            <div class="imagem">
+                <img src="img/Botao StartStop.png" id="start" alt="botão iniciar">
+                <img src="img/Botão Reset.png" id="reset" alt="botão resetar">
+                <img src="img/Cronometro.png" id="crono" alt="Cronometro">
+            </div>
+            <div class="contagem">
+                <div>
+                    <span id="hours">00</span>
+                    <span>Hours</span>
+                </div>
+                <div>
+                    <span id="minutes">00</span>
+                    <span>Minutes</span>
+                </div>
+                <div>
+                    <span id="second">00</span>
+                    <span>Second</span>
+                </div>
+                <div class="tempo">
+                    <span id="millisecond">00</span>
+                    <span>ms</span>
+                </div>
+            </div>
+        <div class="botao">
+            <button type="button" name="start"  id="iniciar pausar">Iniciar</button>
+            <button type="button" name="reset" id="resetar">Resetar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: 'Laila';
+    font-style: normal;
+    font-weight: 100;
+}
+
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 200px;
+}
+/* Div class cronometro - todo conteúdo */
+.cronometro {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* Div class contagem */
+.contagem {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: row;
+    gap: 20px;
+    top: 200px;
+    color: aliceblue;
+    margin-left: 50px;
+}
+/* Todas as divs da class contagem */
+.contagem div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80px;
+    height: 90px;
+    border: 1px groove white;
+    font-size: 50px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, white, black 50%, white);
+    letter-spacing: 2px;
+}
+/* Div tempo */
+.contagem .tempo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40px;
+    height: 40px;
+    margin-right: 40px;
+    border: 1px groove white;
+    font-size: 20px;
+    border-radius: 5px;
+    background: linear-gradient(180deg, white, black 50%, white);
+}
+/* Todas as span*/
+span {
+    font-size: 10px;
+    margin-top: 20px;
+    margin-bottom: -6px;
+}
+/* Tamanho da fonte dos números */
+.tempo, #hours, #minutes, #second, #millisecond {
+    font-size: 60px;
+}
+/* Tamanho do texto ms */
+.tempo span {
+    font-size: 10px;
+    margin-top: 15px;
+}
+/* Tamanho da fonte do número ms */
+.tempo span#millisecond {
+    font-size: 25px;
+}
+/* Div dos botões */
+.botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 150px;
+    margin-top: 100px;
+}
+/* Todos os botões */
+.botao button {
+    scale: 2;
+    color: white;
+    background: black;
+    border: 1px groove gray;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    box-shadow: gray 1px 2px 4px 0px;
+    cursor: pointer;
+}
+/* Ativa sombra interna dos botões ao clicar */
+.botao button:active {
+    box-shadow: gray inset 1px 2px 4px 0px;
+}
+/* Div das imagens */
+.imagem {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Imagem Botão Start do Relógio */
+.imagem #start {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: -140px;
+    z-index: -1;
+}
+/* Imagem Botão Reset do Relógio */
+.imagem #reset {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: -40px;
+    right: 0px;
+    transform: rotate(9deg);
+    z-index: -1;
+}
+/* Imagem Relógio */
+#crono {
+    width: 500px;
+    height: auto;
+}
